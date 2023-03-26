@@ -29,7 +29,7 @@ sightings = get_recent_sightings()
 
 for sighting in sightings:
     bird_name = sighting["comName"]
-    bird_img = get_bird_image(bird_name)
+    #bird_img = get_bird_image(bird_name)
 
     # Display bird info
     col1, col2 = st.columns(2)
