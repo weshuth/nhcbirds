@@ -6,7 +6,7 @@ from PIL import Image
 from io import BytesIO
 import datetime
 
-EBIRD_API_KEY = eBird_api_key
+#EBIRD_API_KEY = eBird_api_key
 API_BASE_URL = "https://api.ebird.org/v2"
 # IMAGE_API_URL = "<YOUR_IMAGE_API_URL>"
 
@@ -25,14 +25,6 @@ def get_recent_sightings():
     data = response.json()
     return data
 
-
-def get_bird_image(bird_name):
-    params = {"bird_name": bird_name}
-    response = requests.get(IMAGE_API_URL, params=params)
-    img = Image.open(BytesIO(response.content))
-    return img
-
-
 sightings = get_recent_sightings()
 
 for sighting in sightings:
@@ -42,7 +34,7 @@ for sighting in sightings:
     # Display bird info
     col1, col2 = st.columns(2)
     with col1:
-        st.image(bird_img, width=200)
+       # st.image(bird_img, width=200)
     with col2:
         st.header(bird_name)
         st.subheader(f'Rarity Score: {sighting["howMany"]}')
