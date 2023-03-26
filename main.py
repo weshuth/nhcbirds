@@ -1,4 +1,4 @@
-!pip install streamlit requests
+pip install streamlit requests
 
 import requests
 import streamlit as st
