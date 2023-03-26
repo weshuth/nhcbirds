@@ -19,7 +19,7 @@ def get_recent_sightings():
     url = f"{API_BASE_URL}/data/obs/US-NC-129/recent"
     params = {
         "back": 30,
-        "key": {EBIRD_API_KEY},
+        "key": st.secrets["EBIRD_API_KEY"],
     }
     response = requests.get(url, params=params)
     data = response.json()
