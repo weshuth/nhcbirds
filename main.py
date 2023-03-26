@@ -35,12 +35,12 @@ for sighting in sightings:
     col1, col2 = st.columns(2)
     with col1:
        # st.image(bird_img, width=200)
-    with col2:
-    st.header(bird_name)
-    st.subheader(f'Rarity Score: {sighting["howMany"]}')
-    st.write(f'Species Code: {sighting["speciesCode"]}')
-    st.write(f'Observation Date: {sighting["obsDt"]}')
-    # Add a small blurb about the bird
-    st.write("Bird description or blurb goes here.")
-    # Trending status could be calculated based on historical data or other factors
-    st.write("Trending: Upward/Downward")
+        with col2:
+            st.header(bird_name)
+            st.subheader(f'Rarity Score: {sighting["howMany"]}')
+            st.write(f'Species Code: {sighting["speciesCode"]}')
+            st.write(f'Observation Date: {sighting["obsDt"]}')
+            # Add a small blurb about the bird
+            st.write("Bird description or blurb goes here.")
+            # Trending status could be calculated based on historical data or other factors
+            st.write("Trending: Upward/Downward")
